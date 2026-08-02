@@ -1,5 +1,6 @@
  import React from 'react'
 import './ProjectCard.css'
+import { Link } from 'react-router-dom'
 function ProjectCard({ project }) {
   return (
       <article className="project-card">
@@ -12,7 +13,9 @@ function ProjectCard({ project }) {
                   <span key={index} className='tag'>{t}</span>
                 ))}
               </div>
-              <button className='btn btn-primary'>View Project</button>
+              <Link to={`/project/${project.id}`} className='btn btn-primary'>
+                View Details
+              </Link>
         </div>
       </article>
   )
